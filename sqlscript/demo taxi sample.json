@@ -1,0 +1,20 @@
+{
+	"name": "demo taxi sample",
+	"properties": {
+		"folder": {
+			"name": "demo"
+		},
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://synapsecoursemadhudl.dfs.core.windows.net/demo/taxi_zone.csv',\n        FORMAT = 'CSV',PARSER_VERSION = '2.0'\n    ) AS [result]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "demo",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
